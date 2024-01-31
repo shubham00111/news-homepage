@@ -1,12 +1,15 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
 
+:root {
   --clr-soft-orange: hsl(35, 77%, 62%);
   --clr-soft-red: hsl(5, 85%, 63%);
   --clr-off-white: hsl(36, 100%, 99%);
   --clr-grayish-blue: hsl(233, 8%, 79%);
   --clr-dark-grayish-blue: hsl(236, 13%, 42%);
   --clr-very-dark-blue: hsl(240, 100%, 5%);
+  --fw-low: 400;
+  --fw-medium: 700;
+  --fw-high: 800;
 }
 
 *,
@@ -17,6 +20,15 @@
   padding: 0;
 }
 
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 2;
+  background-color: var(--clr-off-white);
+}
+li {
+  cursor: pointer;
+}
 p {
   font-size: 15px;
 }
@@ -24,16 +36,22 @@ p {
 img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .app-layout {
-  margin: 15rem;
+  margin-top: 2rem;
+  margin-inline: 15rem;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header-items-list {
+  color: var(--clr-dark-grayish-blue);
 }
 
 .header > * {
@@ -53,7 +71,7 @@ img {
 .grid {
   margin-block: 2rem;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 @media screen and (min-width: 60em) {
@@ -68,6 +86,38 @@ img {
     grid-column: span 2;
   }
 
+  .grid-future {
+    padding-block: 1rem;
+    font-weight: var(--fw-high);
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    line-height: 1;
+  }
+  .grid-future > h1 {
+    max-width: 20rem;
+  }
+
+  .grid-btn-content {
+    color: var(--clr-dark-grayish-blue);
+  }
+  .grid-btn-content > p {
+    padding-top: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .grid-btn-content > button {
+    color: var(--clr-off-white);
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    background-color: var(--clr-soft-red);
+  }
+
   .grid-new {
     padding: 1rem;
     grid-column-start: 3;
@@ -75,33 +125,50 @@ img {
     grid-row-end: 3;
     background-color: var(--clr-very-dark-blue);
     color: white;
+    padding-inline: 1.5rem;
   }
 
   .grid-new > h2 {
     color: var(--clr-soft-orange);
+    font-size: 2.5rem;
   }
-  .grid-new > div > p {
+  .grid-new > div > div > p {
     color: var(--clr-grayish-blue);
+    font-size: 1rem;
+  }
+  .grid-new > div > div > h3 {
+    font-size: 1.5rem;
   }
   .grid-new-items {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
   }
   .top-bottom-border {
     border-block: 2px solid var(--clr-dark-grayish-blue);
     margin-block: 1rem;
-    padding-block: 0.5rem;
+    padding-block: 1.5rem;
   }
 
   .flex {
     display: flex;
-    gap: 1rem;
-    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 1.5rem;
   }
   .flex > img {
-    max-width: 5rem;
+    max-width: 6rem;
+    padding-block: 1rem;
   }
-  .flex > div {
-    padding: 1rem;
+  .number-heading {
+    font-size: 2rem;
+    font-weight: var(--fw-high);
+    color: var(--clr-grayish-blue);
+  }
+  .para {
+    font-weight: var(--fw-low);
+    color: var(--clr-dark-grayish-blue);
+  }
+
+  .flex > div > h4 {
+    font-weight: var(--fw-high);
+    font-size: 1.2rem;
   }
 }

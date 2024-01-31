@@ -48,25 +48,29 @@ function MainContent() {
       <article className="grid-item flex">
         <img src={retroImg} alt="" />
         <div>
-          <p>01</p>
+          <p className="number-heading">01</p>
           <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
+          <p className="para">
+            What happens when old PCs are given modern upgrades?
+          </p>
         </div>
       </article>
       <article className="grid-item flex">
         <img src={laptopImg} alt="" />
         <div>
-          <p>02</p>
+          <p className="number-heading">02</p>
           <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets.</p>
+          <p className="para">Our best picks for various needs and budgets.</p>
         </div>
       </article>
       <article className="grid-item flex">
         <img src={gamigImg} alt="" />
         <div>
-          <p>03</p>
+          <p className="number-heading">03</p>
           <h4>The Growth of Gaming</h4>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+          <p className="para">
+            How the pandemic has sparked fresh opportunities.
+          </p>
         </div>
       </article>
     </main>

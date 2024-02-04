@@ -4,12 +4,15 @@ import puzzleImg from "../assets/images/image-web-3-desktop.jpg";
 import retroImg from "../assets/images/image-retro-pcs.jpg";
 import gamigImg from "../assets/images/image-gaming-growth.jpg";
 import laptopImg from "../assets/images/image-top-laptops.jpg";
-
+import useWindowDimensions from "../hooks/useWindowDimesions";
+import mobilePuzzleImg from "../assets/images/image-web-3-mobile.jpg";
 function MainContent() {
+  const { width } = useWindowDimensions();
+
   return (
     <main className="grid">
       <article className="grid-item grid-img">
-        <img src={puzzleImg} alt="" />
+        <img src={width > 960 ? puzzleImg : mobilePuzzleImg} alt="" />
       </article>
       <article className="grid-item grid-future ">
         <h1>The Bright Future of Web 3.0?</h1>
@@ -46,7 +49,9 @@ function MainContent() {
         </div>
       </article>
       <article className="grid-item flex">
-        <img src={retroImg} alt="" />
+        <div>
+          <img src={retroImg} alt="" />
+        </div>
         <div>
           <p className="number-heading">01</p>
           <h4>Reviving Retro PCs</h4>
@@ -56,7 +61,9 @@ function MainContent() {
         </div>
       </article>
       <article className="grid-item flex">
-        <img src={laptopImg} alt="" />
+        <div>
+          <img src={laptopImg} alt="" />
+        </div>
         <div>
           <p className="number-heading">02</p>
           <h4>Top 10 Laptops of 2022</h4>
@@ -64,7 +71,9 @@ function MainContent() {
         </div>
       </article>
       <article className="grid-item flex">
-        <img src={gamigImg} alt="" />
+        <div>
+          <img src={gamigImg} alt="" />
+        </div>
         <div>
           <p className="number-heading">03</p>
           <h4>The Growth of Gaming</h4>

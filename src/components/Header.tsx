@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Logo from "../assets/images/logo.svg";
 import Hambergur from "../assets/images/icon-menu.svg";
 import CloseIcon from "../assets/images/icon-menu-close.svg";
 
 function Header() {
   const [showMenu, setShowMenu] = useState(false);
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const handleMenu = () => {
     if (ref.current !== null) {
@@ -44,7 +44,9 @@ function Header() {
           className="close-icon"
           onClick={() => {
             setShowMenu(false);
-            ref.current.style.display = "none";
+            if (ref.current) {
+              ref.current.style.display = "none";
+            }
           }}
         >
           <img src={CloseIcon} alt="" />

@@ -1,5 +1,3 @@
-import React from "react";
-
 import puzzleImg from "../assets/images/image-web-3-desktop.jpg";
 import retroImg from "../assets/images/image-retro-pcs.jpg";
 import gamigImg from "../assets/images/image-gaming-growth.jpg";
